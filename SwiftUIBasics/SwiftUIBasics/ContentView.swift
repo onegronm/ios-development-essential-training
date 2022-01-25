@@ -8,8 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    // Binding
+    @State var name = ""
+    
     var body: some View {
         VStack {
+            
+            // $ denotes a bound or state variable
+            TextField("Name", text: $name)
+            Text("Hello \(name)")
+            
             Text("Weather")
                 .font(.largeTitle)
                 .fontWeight(.bold)
